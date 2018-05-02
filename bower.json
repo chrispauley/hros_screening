@@ -1,0 +1,29 @@
+{
+  "name": "hros_screening",
+  "description": "Project to visualize HR Open Standards Screening specification.",
+  "private": true,
+  "main": "readme.md",
+  "ignore": [
+    ".gitignore",
+    ".bowerrc",
+    "bower.json",
+    "documentation",
+    "ref"
+  ],
+  "authors": [
+    {
+      "name": "HROpen Standards Consortium",
+      "email": "info@hropenstandards.org",
+      "homepage": "http://hropenstandards.org"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrispauley/hros_screening"
+  },
+  "devDependencies": {
+    "common": "https://github.com/HROpen/Common.git#development",
+    "screening": "https://github.com/HROpen/Payroll.git#ScreeningReport",
+    "screening_wiki": "https://github.com/HROpen/Screening.wiki.git"
+  }
+}

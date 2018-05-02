@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HROS Screening - JSchema</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='style.css' />
+  <script type="text/javascript">
+    function resizeIframe(obj) {
+      var h = window.innerHeight;
+      var w = window.innerWidth;
+      // console.log('w:', w);
+      obj.style.height = 0;
+      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      obj.style.width = 1200 + 'px';
+      //  obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
+    }
+
+    function loadScreeningType() {
+      var newUrl =
+        'JSchema/index.htm?#schema=http://screening.hrsres.com:8006/schema/screening/json/ScreeningType.json';
+      document.getElementById('iframeID').src = newUrl;
+    }
+
+  </script>
+</head>
+
+<body>
+  <header>
+    <div id='top-nav'></div>
+  </header>
+  <hr/>
+
+  <div class='container main-content' style="margin-top: 40px;">
+
+    <div class='row'>
+      <div class="col-md-4">
+        <h4>As of 2018-04-30</h4>
+      </div>
+    </div>
+    <div class="row well">
+      <div class="col-md-4">
+        <p>Here are your instructions to use the JSchema visualization tool:</p>
+      </div>
+      <div class='col-md-8'>
+        <div>
+          <p class='text-muted'>
+            <span class='badge'>1</span> Load the schema:
+            <a target='_new' onClick='loadScreeningType()'>ScreeningType.json</a>
+          </p>
+          <p class='text-muted'>
+            <span class='badge'>2</span> Click on Validate.
+          </p>
+          <p class='text-muted'>
+            <span class='badge'>3</span> Drag a sample file from your file system onto the text area for a JSON instance. Then click on the yellow Process button.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <iframe id='iframeID' src='JSchema/index.htm' frameborder='0' onload='resizeIframe(this)'></iframe>
+      </div>
+    </div>
+
+    <div class='row'>
+      <hr/>
+      <div class='col-md-12'>
+        <p class='text-muted'>This page uses the JSchema web application in an iframe. It doesn't work from the gh-pages branch of the repo because
+          of CORS issues. It does work when it is hosted in a docker container on AWS.
+        </p>
+        <p class='text-warning'>
+          To validate other schemas and samples:
+
+          <ol>
+            <li>click on the validate button.</li>
+            <li>Make sure the 'by URL' textbox has a full url (including the http:// and the servername.com:port etc.).</li>
+            <li>Then you can use drag and drop from your file system. Drag the file onto the text input box that has "enter instance
+              for validation...". </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id='footer'></div>
+  <script src="jschemapage.bundle.js"></script>
+</body>
+
+</html>
