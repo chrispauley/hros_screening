@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "common": "https://github.com/HROpen/Common.git#development",
-    "screening": "https://github.com/HROpen/Payroll.git#ScreeningReport",
+    "screening": "https://github.com/HROpen/Screening.git#ScreeningReport",
     "screening_wiki": "https://github.com/HROpen/Screening.wiki.git"
   }
 }
