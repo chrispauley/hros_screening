@@ -1,0 +1,41 @@
+{
+  "name": "hros_screening",
+  "version": "1.0.0",
+  "description": "This is an repository is an independently created web application to view JSON instances for the HR Open Standards screening JSON Schemas. The HR Open Standards Screening Workgroup is currently working on version 4.2.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrispauley/hros_screening.git"
+  },
+  "keywords": [],
+  "author": "Chris Pauley <pauleyc@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrispauley/hros_screening/issues"
+  },
+  "homepage": "https://github.com/chrispauley/hros_screening#readme",
+  "devDependencies": {
+    "babel": "6.23.0",
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-stage-2": "6.24.1",
+    "browser-sync": "2.24.3",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "5.0.0",
+    "gulp-markdown": "2.0.1",
+    "gulp-markdown-pdf": "6.0.0",
+    "gulp-pug": "4.0.1",
+    "gulp-sass": "4.0.1",
+    "gulp-sourcemaps": "2.6.4",
+    "write-json-file": "2.3.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-2"
+    ]
+  }
+}

@@ -8,8 +8,12 @@ You won't find the actual source code here. But you **can** find the distributio
 The website supports view the hosted JSON instances as well as drag and drop from your file system.
 
 
+## Run your own Docker instance
+[https://hub.docker.com/r/chrispauley/nginx-hrosscreening/](https://hub.docker.com/r/chrispauley/nginx-hrosscreening/)
+
+
 ## Contributing
-Send me a message via LinkedIn.
+Send me a message via [LinkedIn](https://www.linkedin.com/in/christopherpauley/).
 
 ## Credits
 Thanks to the people at Manus for the use of their JSchema web application which is embedded for validation purposes.

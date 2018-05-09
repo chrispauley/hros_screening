@@ -1,21 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HROS Screening - JSchema</title>
-
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-  <link rel='stylesheet' href='style.css' />
-  <script type="text/javascript">
-    function resizeIframe(obj) {
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HROS Screening - JSchema</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function resizeIframe(obj) {
       var h = window.innerHeight;
       var w = window.innerWidth;
       // console.log('w:', w);
@@ -23,57 +17,72 @@
       obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
       obj.style.width = 1200 + 'px';
       //  obj.style.width = obj.contentWindow.document.body.scrollWidth + 'px';
-    }
-
-    function loadScreeningType() {
+      }
+      function loadScreeningType() {
       var newUrl =
-        'JSchema/index.htm?#schema=http://screening.hrsres.com:8006/schema/screening/json/ScreeningType.json';
+      'JSchema/index.htm?#schema=http://screening.hrsres.com:8008/schema/screening/json/ScreeningType.json';
       document.getElementById('iframeID').src = newUrl;
-    }
-
-  </script>
-</head>
-
-<body>
-  <header>
-    <div id='top-nav'></div>
-  </header>
-  <hr/>
-
-  <div class='container main-content' style="margin-top: 40px;">
-
-    <div class='row'>
-      <div class="col-md-4">
-        <h4>As of 2018-04-30</h4>
+      }
+    </script>
+  </head>
+  <body>
+    <header id="top-nav">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display-->
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand pull-left" href="index.html"><img id="brand-image" alt="HROS Screening" src="http://via.placeholder.com/100x50"></a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling-->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://github.com/chrispauley/hros_screening">GitHub Repo</a></li>
+                  <li><a href="https://hub.docker.com/r/chrispauley/nginx-hrosscreening/">Docker Hub</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr>
+    <div class="container main-content" style="margin-top: 40px;">
+      <div class="row">
+        <div class="col-md-4">
+          <h4>As of 2018-05-09</h4>
+        </div>
       </div>
-    </div>
-    <div class="row well">
-      <div class="col-md-4">
-        <p>Here are your instructions to use the JSchema visualization tool:</p>
+      <div class="row well">
+        <div class="col-md-4">
+          <p>Here are your instructions to use the JSchema visualization tool:</p>
+        </div>
+        <div class="col-md-8">
+          <div>
+            <p class="text-muted"><span class="badge">1</span> Load the schema:<a target="_new" onclick="loadScreeningType()">ScreeningType.json</a></p>
+            <p class="text-muted"><span class="badge">2</span> Click on Validate.</p>
+            <p class="text-muted"><span class="badge">3</span> Drag a sample file from your file system onto the text area for a JSON instance. Then click on the yellow Process button.</p>
+          </div>
+        </div>
       </div>
-      <div class='col-md-8'>
-        <div>
-          <p class='text-muted'>
-            <span class='badge'>1</span> Load the schema:
-            <a target='_new' onClick='loadScreeningType()'>ScreeningType.json</a>
-          </p>
-          <p class='text-muted'>
-            <span class='badge'>2</span> Click on Validate.
-          </p>
-          <p class='text-muted'>
-            <span class='badge'>3</span> Drag a sample file from your file system onto the text area for a JSON instance. Then click on the yellow Process button.
-          </p>
+      <div class="row">
+        <div class="col-md-12">
+          <iframe id="iframeID" src="JSchema/index.htm" frameborder="0" onload="resizeIframe(this)"></iframe>
         </div>
       </div>
     </div>
-    <div class='row'>
-      <div class='col-md-12'>
-        <iframe id='iframeID' src='JSchema/index.htm' frameborder='0' onload='resizeIframe(this)'></iframe>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <p>
+            <center>
+              <h4 class="footer">HR Open Standards</h4>
+              <p class="footertext">Screening Workgroup</p>
+            </center>
+          </p>
+        </div>
       </div>
-    </div>
-
-  </div>
-
-</body>
-
+    </footer>
+  </body>
 </html>
