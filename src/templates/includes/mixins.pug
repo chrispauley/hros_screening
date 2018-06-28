@@ -39,12 +39,12 @@ mixin navBar(pathObject)
             span.icon-bar
             span.icon-bar
           a.navbar-brand.pull-left(href='index.html')
-            img#brand-image(alt='HROS Screening', src='http://via.placeholder.com/100x50')
+            img#brand-image(alt='HROS Screening', src='http://via.placeholder.com/100x30')
         // Collect the nav links, forms, and other content for toggling
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           ul.nav.navbar-nav.navbar-right
-            //- li(class=active == 'about' ? 'active' : '')
-            //-   a(href='about.html') About
+            li(class=active == 'about' ? 'active' : '')
+              a(href='docs.html') Docs
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 | About

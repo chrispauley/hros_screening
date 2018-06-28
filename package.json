@@ -4,7 +4,7 @@
   "description": "This is an repository is an independently created web application to view JSON instances for the HR Open Standards screening JSON Schemas. The HR Open Standards Screening Workgroup is currently working on version 4.2.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
